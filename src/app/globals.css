@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'PT Sans', sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 220 20% 97%; /* Lighter grey background */
+    --foreground: 210 10% 23%; /* Dark grey text */
+    --card: 0 0% 100%;
+    --card-foreground: 210 10% 23%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 10% 23%;
+    --primary: 210 90% 50%; /* Royal Blue */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 10% 23%; /* Black secondary header */
+    --secondary-foreground: 0 0% 98%;
+    --muted: 220 13% 91%;
+    --muted-foreground: 220 5.9% 45.1%;
+    --accent: 35 91% 55%; /* Orange/Gold for accents */
+    --accent-foreground: 0 0% 100%;
+    --destructive: 2 63% 51%; /* Red for buttons, borders */
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 13% 85%;
+    --input: 0 0% 100%;
+    --ring: 210 90% 50%; /* Royal Blue for ring */
+    --radius: 0.375rem; /* 6px */
+  }
+
+  .dark {
+    /* Keeping dark mode for now, though not requested */
+    --background: 210 10% 23%;
+    --foreground: 60 9.1% 97.8%;
+    --card: 210 10% 23%;
+    --card-foreground: 60 9.1% 97.8%;
+    --popover: 210 10% 23%;
+    --popover-foreground: 60 9.1% 97.8%;
+    --primary: 210 90% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 0%;
+    --secondary-foreground: 60 9.1% 97.8%;
+    --muted: 210 10% 15%;
+    --muted-foreground: 24 5.4% 63.9%;
+    --accent: 35 91% 60%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 2 63% 51%;
+    --destructive-foreground: 60 9.1% 97.8%;
+    --border: 210 10% 15%;
+    --input: 210 10% 15%;
+    --ring: 210 90% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
